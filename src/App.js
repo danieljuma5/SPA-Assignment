@@ -1,23 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { useState } from "react";
+import ImageCardContent from "./ImageCardContent";
 
 function App() {
+  const [addText, setAddText] = useState("");
+
+  function handleClick(e) {
+    e.target.value = "I'm glad you feel the same way too"
+    setAddText(alert(e.target.value))
+
+    console.log(e.target.value)
+
+  }
+
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <ImageCardContent/>
       </header>
+      <button className="forest-btn" onClick={handleClick}>Click Please</button>
     </div>
   );
 }
