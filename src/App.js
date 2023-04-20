@@ -6,7 +6,7 @@ function App() {
   const [addText, setAddText] = useState("");
 
   function handleClick(e) {
-    e.target.value = "I'm glad you feel the same way too"
+    e.target.value = addText + "I'm glad you feel the same way too"
     setAddText(alert(e.target.value))
 
     console.log(e.target.value)
